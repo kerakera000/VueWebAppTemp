@@ -1,9 +1,9 @@
 <template>
     <div class="sidebar">
-        <nav>
+        <nav class="nav">
             <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/vendor">Vendor</RouterLink>
+            <RouterLink to="/editpage">editpage</RouterLink>
+            <RouterLink to="/vendor">top</RouterLink>
             サイドバー
         </nav>
     </div>

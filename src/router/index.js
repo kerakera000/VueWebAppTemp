@@ -1,28 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/User/HomeView.vue'
 import VendorView from '../views/Vendor/VendorView.vue'
+import EditPage from '../views/Vendor/EditPage/EditPageView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+
+    // メインページ
     {
       path: '/',
       name: 'home',
       component: HomeView
     },
     {
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/User/AboutView.vue')
+    },
+
+    // 管理者ページ
+    {
       path: '/vendor',
       name: 'vendor',
       component: VendorView
     },
+
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/User/AboutView.vue')
-    }
+      path: '/editpage',
+      name: 'editpage',
+      component: EditPage
+    },
   ]
 })
 
